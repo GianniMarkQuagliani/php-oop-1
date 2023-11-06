@@ -5,8 +5,6 @@ require_once 'db/db.php';
 
 // creo due oggetti della classe Movie 
 // Istanza di oggetti Movie
-$movie = new Movie('The Matrix', 'The Wachowskis', ['Action', 'Sci-Fi', 'Fantasy']);
-$movie2 = new Movie('Film2', 'Film2', ['Comedy', 'Drama', 'Thriller']);
 
 ?>
 
@@ -28,15 +26,16 @@ $movie2 = new Movie('Film2', 'Film2', ['Comedy', 'Drama', 'Thriller']);
 
     <!-- Container -->
     <div  class="container">
-        <h1>Movie 1</h1>
-        <p>Title: <?php echo $movie->title; ?></p>
-        <p>Director: <?php echo $movie->director; ?></p>
-        <p>Genres: <?php echo implode(', ', $movie->genres); ?></p>
-
-        <h1>Movie 2</h1>
-        <p>Title: <?php echo $movie2->title; ?></p>
-        <p>Director: <?php echo $movie2->director; ?></p>
-        <p>Genres: <?php echo implode(', ', $movie2->genres); ?></p>
+        <h1>Movie List</h1>
+        <ul>
+            <?php foreach ($movies as $movie): ?>
+                <li>
+                    <h2><?php echo $movie->title; ?></h2>
+                    <p>Director: <?php echo $movie->director; ?></p>
+                    <p>Genres: <?php echo implode(', ', $movie->genres); ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
 
 </body>
