@@ -13,4 +13,19 @@ $movies = [
     new Movie('Film9', 'Film9', ['Comedy', 'Drama', 'Thriller']),
     new Movie('Film10', 'Film10', ['Comedy', 'Drama', 'Thriller']),
 ];
+
+// definisco un array di generi 
+$randomGenres = [
+    'Action', 
+    'Adventure', 
+    'Comedy', 
+    'Drama', 
+    'Fantasy', 
+    'Horror', 
+    'Mystery', 
+    'Romance', 
+    'Sci-Fi', 
+    'Thriller'
+];
+
 ?>
