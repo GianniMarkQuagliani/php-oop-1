@@ -1,5 +1,7 @@
 <?php
 
+require_once 'model/movie.php';
+require_once 'model/movie.php';
 ?>
 
 
