@@ -1,0 +1,67 @@
+/* Stile per il titolo della pagina */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+/* Stile per la barra di navigazione */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Stile per le card dei film */
+.card {
+    border: none;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+/* Effetto ombra all'hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Dimensione del titolo */
+.card-title {
+    font-size: 24px; 
+}
+
+/* Dimensione del testo del film */
+.card-text {
+    font-size: 16px; 
+}
+
+/* Stile per il container delle card */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Rimuove la lista puntata e il padding dal footer */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Aggiunge una piccola icona di stella per ciascun genere */
+.genre-icon {
+    font-size: 20px;
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+/* Stile per i link al passaggio del mouse */
+a:hover {
+    text-decoration: underline;
+}

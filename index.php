@@ -1,10 +1,8 @@
 <?php
 
-require_once 'model/movie.php';
-require_once 'db/db.php';
+require_once __DIR__ . '/model/movie.php';
+require_once __DIR__ . '/db/db.php';
 
-// creo due oggetti della classe Movie 
-// Istanza di oggetti Movie
 
 ?>
 
@@ -15,28 +13,49 @@ require_once 'db/db.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css' integrity='sha512-r0fo0kMK8myZfuKWk9b6yY8azUnHCPhgNz/uWDl2rtMdWJlk7gmd9socvGZdZzICwAkMgfTkVrplDahQ07Gi0A==' crossorigin='anonymous'/>
-    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css' integrity='sha512-r0fo0kMK8myZfuKWk9b6yY8azUnHCPhgNz/uWDl2rtMdWJlk7gmd9socvGZdZzICwAkMgfTkVrplDahQ07Gi0A==' crossorigin='anonymous'>
     <!-- Title -->
-    <title>Movie</title>
+    <title>Movie List</title>
 </head>
 <body>
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Movie Database</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Container -->
     <div  class="container">
-        <h1>Movie List</h1>
-        <ul>
+        <h1 class="mt-5">Movie List</h1>
+        <div class="row mt-4">
             <?php foreach ($movies as $movie): ?>
-                <li>
-                    <h2><?php echo $movie->title; ?></h2>
-                    <p>Director: <?php echo $movie->director; ?></p>
-                    <p>Genres: <?php echo implode(', ', $movie->genres); ?></p>
-                </li>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Movie Poster">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $movie->title; ?></h5>
+                            <p class="card-text">Director: <?php echo $movie->director; ?></p>
+                            <p class="card-text">
+                                Genres:
+                                <?php foreach ($movie->genres as $genre): ?>
+                                    <span class="genre-icon">&#9733;</span><?php echo $genre; ?>
+                                <?php endforeach; ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             <?php endforeach; ?>
-        </ul>
+        </div>
     </div>
-
 </body>
 </html>
