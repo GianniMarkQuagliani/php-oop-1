@@ -2,6 +2,11 @@
 
 require_once 'model/movie.php';
 require_once 'model/movie.php';
+
+// creo due oggetti della classe Movie 
+// Istanza di oggetti Movie
+$movie = new Movie('The Matrix', 'The Wachowskis', ['Action', 'Sci-Fi', 'Fantasy']);
+$movie2 = new Movie('Film2', 'Film2', ['Comedy', 'Drama', 'Thriller']);
 ?>
 
 

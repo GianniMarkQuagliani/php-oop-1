@@ -2,3 +2,4 @@
 
 - Inizio a creare una classe su movie.php e definisco i membri della classe
 - Creo un costruttore della classe
+- creo due oggetti della classe Movie 
