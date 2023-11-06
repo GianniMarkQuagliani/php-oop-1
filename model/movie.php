@@ -13,7 +13,25 @@ class Movie{
         $this->genres = $genres;
     }
     
-
+    // Metodo per ottenere i dettagli del film
+    public function getDetails() {
+        $details = "<h5 class='card-title'>{$this->title}</h5>";
+        $details .= "<p class='card-text'>Director: {$this->director}</p>";
+        $details .= "Genres: ";
+        
+        foreach ($this->genres as $genre) {
+            $details .= "<span class='genre-icon'>&#9733;</span> {$genre}, ";
+        }
+        
+        // Rimuovo l'ultima virgola e spazio extra
+        $details = rtrim($details, ', ');
+    
+        return $details;
+    }
+    
+    
+    
+    
 }
 
 ?>

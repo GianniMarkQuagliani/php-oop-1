@@ -43,13 +43,8 @@ require_once __DIR__ . '/db/db.php';
                     <div class="card">
                         <img src="https://via.placeholder.com/150" class="card-img-top" alt="Movie Poster">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $movie->title; ?></h5>
-                            <p class="card-text">Director: <?php echo $movie->director; ?></p>
                             <p class="card-text">
-                                Genres:
-                                <?php foreach ($movie->genres as $genre): ?>
-                                    <span class="genre-icon">&#9733;</span><?php echo $genre; ?>
-                                <?php endforeach; ?>
+                                <?php echo $movie->getDetails(); ?>
                             </p>
                         </div>
                     </div>
