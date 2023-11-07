@@ -64,10 +64,19 @@ if (isset($_GET['search'])) {
                     </li>
                 </ul>
             </div>
+            <ul class="navbar-nav ml-auto">
+                <!-- Controllo per il cambio di tema -->
+                <li class="nav-item">
+                    <label class="nav-link" for="backgroundColor">Colore di Sfondo (RGBA):
+                        <!-- Campo di input per il colore di sfondo -->
+                        <input type="color" id="backgroundColor" value="#ffffff"> 
+                    </label>
+                </li>
+            </ul>
         </div>
     </nav>
     <!-- Container -->
-    <div  class="container">
+    <div class="container">
     <h1 class="mt-5">Movie List</h1>
     <form class="form-inline mt-3">
     <div class="input-group">
@@ -95,5 +104,6 @@ if (isset($_GET['search'])) {
             <?php endforeach; ?>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
