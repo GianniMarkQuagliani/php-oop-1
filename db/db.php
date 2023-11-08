@@ -4,6 +4,9 @@
 // Aggiorna il modo in cui crei gli oggetti Movie
 require_once  __DIR__ . '/../model/movie.php';
 require_once  __DIR__ . '/../model/TvSerie.php';
+$movies = [];
+
+try {
 $movies = [
     new Movie('The Matrix', 'The Wachowskis', ['Action', 'Sci-Fi', 'Fantasy'], 1999, 136),
     new Movie('Film2', 'Film2', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
@@ -14,8 +17,13 @@ $movies = [
     new Movie('Film7', 'Film7', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
     new Movie('Film8', 'Film8', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
     new Movie('Film9', 'Film9', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
-    new Movie('Film10', 'Film10', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
+    // ERROR
+    new Movie('Film10', 'Film10', ['Comedy', 'Drama', 'Thriller'], 1500, 120),
 ];
+
+} catch (Exception $e) {
+    echo "Errore: " . $e->getMessage();
+}
 
 // definisco un array di generi 
 $randomGenres = [
@@ -30,6 +38,8 @@ $randomGenres = [
     'Sci-Fi', 
     'Thriller'
 ];
+
+try {
 $tvseries = [
     new TvSerie('Breaking Bad', 'Vince Gilligan', ['Crime', 'Drama', 'Thriller'], 2008, 2013, 62, 5),
     new TvSerie('Stranger Things', 'The Duffer Brothers', ['Drama', 'Fantasy', 'Horror'], 2016, 2022, 34, 4),
@@ -42,4 +52,7 @@ $tvseries = [
     new TvSerie('The Big Bang Theory', 'Chuck Lorre', ['Comedy', 'Drama', 'Sci-Fi'], 2007, 2019, 66, 9),
     new TvSerie('The Wire', 'David Simon', ['Crime', 'Drama', 'Mystery'], 2008, 2019, 60, 4),
 ];
+} catch (Exception $e) {
+    echo "Errore: " . $e->getMessage();
+}
 ?>
