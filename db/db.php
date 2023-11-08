@@ -29,5 +29,16 @@ $randomGenres = [
     'Sci-Fi', 
     'Thriller'
 ];
-
+$tvseries = [
+    new TvSerie('Breaking Bad', 'Vince Gilligan', ['Crime', 'Drama', 'Thriller'], 2008, 2013, 62, 5),
+    new TvSerie('Stranger Things', 'The Duffer Brothers', ['Drama', 'Fantasy', 'Horror'], 2016, 2022, 34, 4),
+    new TvSerie('Game of Thrones', 'Vince Gilligan', ['Drama', 'Fantasy', 'Horror'], 2011, 2019, 73, 8),
+    new TvSerie('Suits', 'Aaron Korsh', ['Comedy', 'Drama', 'Romance'], 2011, 2019, 51, 4),
+    new TvSerie('The Big Bang Theory', 'Chuck Lorre', ['Comedy', 'Drama', 'Sci-Fi'], 2007, 2019, 66, 9),
+    new TvSerie('The Wire', 'David Simon', ['Crime', 'Drama', 'Mystery'], 2008, 2019, 60, 4),
+    new TvSerie('Friends', 'David Simon', ['Comedy', 'Drama', 'Romance'], 1994, 2004, 24, 10),
+    new TvSerie('The 100', 'Aaron Korsh', ['Comedy', 'Drama', 'Romance'], 2013, 2019, 42, 4),
+    new TvSerie('The Big Bang Theory', 'Chuck Lorre', ['Comedy', 'Drama', 'Sci-Fi'], 2007, 2019, 66, 9),
+    new TvSerie('The Wire', 'David Simon', ['Crime', 'Drama', 'Mystery'], 2008, 2019, 60, 4),
+];
 ?>
