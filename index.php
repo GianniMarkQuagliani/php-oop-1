@@ -89,6 +89,18 @@ if (isset($_GET['search'])) {
         <h1 class="mt-5">Movie List</h1>
     </form>
     <div class="row mt-4">
+        <?php $movieCount = count($movies); ?>
+        <?php if ($movieCount === 0): ?>
+            <div class="col-md-12">
+                <p>Nessun risultato trovato nei film.</p>
+            </div>
+        <?php else: ?>
+            <div class="col-md-12">
+                <p>Trovati 
+                    <?php echo $movieCount; ?> 
+                    risultati nei film.
+                </p>
+            </div>
         <?php foreach ($movies as $movie): ?>
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -101,12 +113,22 @@ if (isset($_GET['search'])) {
                 </div>
             </div>
         <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 <!-- Container -->
 <div class="container">
 <h1 class="mt-5">Serie TV List</h1>
 <div class="row mt-4">
+    <?php $tvseriesCount = count($tvseries); ?>
+    <?php if ($tvseriesCount === 0): ?>
+        <div class="col-md-12">
+            <p>Nessun risultato trovato nelle serie TV.</p>
+        </div>
+    <?php else: ?>
+        <div class="col-md-12">
+            <p>Trovati <?php echo $tvseriesCount; ?> risultati nelle serie TV.</p>
+        </div>
         <?php foreach ($tvseries as $tvserie): ?>
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -119,6 +141,7 @@ if (isset($_GET['search'])) {
                 </div>
             </div>
         <?php endforeach; ?>
+    <?php endif; ?>
     </div>
 </div>
 <script src="script.js"></script>
