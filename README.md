@@ -30,3 +30,14 @@
 # La logica di TvSerie.php
 
 - è uguale a quella di Movie.php
+
+# Update
+- Gestione degli errori con throw Exception e try/catch:
+
+- Ho utilizzato il costrutto try/catch per gestire le eccezioni. 
+- Ho creato un oggetto Movie con un valore di anno di pubblicazione (published_year) non valido (nel tuo caso, 'invalid_year').
+Nel blocco catch, ho catturato l'eccezione usando catch (Exception $e), che cattura qualsiasi eccezione di tipo Exception. Poi ho stampato un messaggio di errore con $e->getMessage(), che restituisce il messaggio dell'eccezione.
+- Se non vengono trovati risultati, viene visualizzato un messaggio appropriato.
+- Hai incluso una sezione per la "Serie TV List" che mostra una lista di serie TV simile alla "Movie List".
+- Integrazione con il Trait YearTrait:
+- Ho incluso il Trait YearTrait all'interno della classe Movie.

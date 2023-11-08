@@ -1,12 +1,15 @@
 <?php
 require_once __DIR__ . '/Production.php';
+require_once __DIR__ . '/../Trait/YearTrait.php';
 
 // Creo la classe TvSerie
 class TvSerie extends Production {
+    use YearTrait;
     protected $aired_from_year;
     protected $aired_to_year;
     protected $number_of_episodes;
     protected $number_of_seasons;
+    protected $published_year;
 
     // Costruttore della classe
     public function __construct($title, $director, $genres, $aired_from_year, $aired_to_year, $number_of_episodes, $number_of_seasons) {
@@ -14,6 +17,7 @@ class TvSerie extends Production {
         parent::__construct($title, $director, $genres);
 
         // Inizializzo i campi specifici delle serie TV
+        $this->setPublishedYear($aired_from_year);
         $this->aired_from_year = $aired_from_year;
         $this->aired_to_year = $aired_to_year;
         $this->number_of_episodes = $number_of_episodes;
@@ -26,7 +30,7 @@ class TvSerie extends Production {
         $details = parent::getDetails();
 
         // Aggiungo i dettagli specifici delle serie TV
-        $details .= "<p>Aired From Year: {$this->aired_from_year}</p>";
+        $details .= "<p>Aired From Year: {$this->getPublishedYear()}</p>";
         $details .= "<p>Aired To Year: {$this->aired_to_year}</p>";
         $details .= "<p>Number of Episodes: {$this->number_of_episodes}</p>";
         $details .= "<p>Number of Seasons: {$this->number_of_seasons}</p>";
