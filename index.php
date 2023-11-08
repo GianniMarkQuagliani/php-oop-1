@@ -76,34 +76,51 @@ if (isset($_GET['search'])) {
         </div>
     </nav>
     <!-- Container -->
-    <div class="container">
-    <h1 class="mt-5">Movie List</h1>
+<div class="container">
     <form class="form-inline mt-3">
-    <div class="input-group">
-        <input class="form-control" type="text" name="search" placeholder="Search">
-        <div class="input-group-append">
-            <button class="btn btn-primary ms-2" type="submit">
-                <i class="fas fa-search"></i> Search
-            </button>
+        <div class="input-group">
+            <input class="form-control" type="text" name="search" placeholder="Search">
+            <div class="input-group-append">
+                <button class="btn btn-primary ms-2" type="submit">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
         </div>
-    </div>
-</form>
-
-        <div class="row mt-4">
-            <?php foreach ($movies as $movie): ?>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Movie Poster">
-                        <div class="card-body">
-                            <p class="card-text">
-                                <?php echo $movie->getDetails(); ?>
-                            </p>
-                        </div>
+        <h1 class="mt-5">Movie List</h1>
+    </form>
+    <div class="row mt-4">
+        <?php foreach ($movies as $movie): ?>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Movie Poster">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <?php echo $movie->getDetails(); ?>
+                        </p>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
-    <script src="script.js"></script>
+</div>
+<!-- Container -->
+<div class="container">
+<h1 class="mt-5">Serie TV List</h1>
+<div class="row mt-4">
+        <?php foreach ($tvseries as $tvserie): ?>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="TV Serie Poster">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <?php echo $tvserie->getDetails(); ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

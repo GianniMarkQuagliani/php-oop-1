@@ -3,6 +3,7 @@
 // Istanza di oggetti Movie
 // Aggiorna il modo in cui crei gli oggetti Movie
 require_once  __DIR__ . '/../model/movie.php';
+require_once  __DIR__ . '/../model/TvSerie.php';
 $movies = [
     new Movie('The Matrix', 'The Wachowskis', ['Action', 'Sci-Fi', 'Fantasy'], 1999, 136),
     new Movie('Film2', 'Film2', ['Comedy', 'Drama', 'Thriller'], 2000, 120),
