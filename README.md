@@ -26,3 +26,7 @@
 - Successivamente, che scritto $this->published_year e $this->running_time che vengono inizializzati con i valori forniti come argomenti.
 - Ho creato un metodo chiamato getDetails che restituisce una stringa contenente i dettagli del film.
 - Aggiorno l'array $movies nel file db.php che contiene una lista di oggetti Movie che rappresentano diversi film, ciascuno con i propri dettagli come titolo, regista, generi, anno di pubblicazione e durata.
+
+# La logica di TvSerie.php
+
+- è uguale a quella di Movie.php

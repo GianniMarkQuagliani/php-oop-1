@@ -19,5 +19,20 @@ class TvSerie extends Production {
         $this->number_of_episodes = $number_of_episodes;
         $this->number_of_seasons = $number_of_seasons;
     }
+
+    // Metodo getDetails per aggiungere dettagli specifici delle serie TV
+    public function getDetails() {
+        // Ottengo i dettagli delle produzioni dal metodo del genitore (Production)
+        $details = parent::getDetails();
+
+        // Aggiungo i dettagli specifici delle serie TV
+        $details .= "<p>Aired From Year: {$this->aired_from_year}</p>";
+        $details .= "<p>Aired To Year: {$this->aired_to_year}</p>";
+        $details .= "<p>Number of Episodes: {$this->number_of_episodes}</p>";
+        $details .= "<p>Number of Seasons: {$this->number_of_seasons}</p>";
+
+        return $details;
+    }
 }
+
 ?>
