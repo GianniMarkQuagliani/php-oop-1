@@ -7,8 +7,3 @@ backgroundColor.addEventListener("input", function() {
     document.body.style.backgroundColor = selectedColor; 
 });
 
-// Inizializzo il tema in base alla selezione corrente
-const currentTheme = themeSwitch.value;
-// applico uno stile CSS diverso in base al tema selezionato dall'utente.
-document.body.className = currentTheme;
-
